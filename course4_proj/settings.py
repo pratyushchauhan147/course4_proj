@@ -35,7 +35,9 @@ class Dev(Configuration):
     # Quick-start development settings - unsuitable for production
     SECRET_KEY = 'django-insecure-zaiqyyg8b%h58-f)dga!6sgs$tkk1qi*m_$gv=w=%_3)pdj@e@'
     DEBUG = True
+    ADMINS = [("pratyush", "22051960@kiit.ac.in")]
 
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     ALLOWED_HOSTS = values.ListValue(["localhost", "0.0.0.0", ".codio.io", os.environ.get('CODIO_HOSTNAME') + '-8000.codio.io'])
     X_FRAME_OPTIONS = "ALLOW-FROM " + os.environ.get("CODIO_HOSTNAME") + "-8000.codio.io"
     CSRF_COOKIE_SAMESITE = None
