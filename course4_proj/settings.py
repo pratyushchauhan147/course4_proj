@@ -60,6 +60,7 @@ class Dev(Configuration):
         'django.contrib.staticfiles',
         'movies',
         "django_celery_results",
+        "django_celery_beat",
     ]
 
     MIDDLEWARE = [
